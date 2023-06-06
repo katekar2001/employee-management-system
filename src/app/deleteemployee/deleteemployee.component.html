@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-5 form">
+      <form [formGroup]="deleteEmpForm" (ngSubmit)="deleteEmployee()">
+        <div class="card">
+          <div class="card-body">
+            <div class="form-group my-4">
+              <label class="form-label">ID</label>
+              <input type="text" name="id" id="" class="form-control" formControlName="id">
+            </div>
+            <button class="btn btn-success" [disabled]="deleteEmpForm.invalid">Delete Employee</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

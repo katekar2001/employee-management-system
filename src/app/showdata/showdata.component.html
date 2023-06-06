@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 mt-5">
+      <table class="table">
+        <tr>
+          <th colspan="5" class="text-danger fw-bold title">Employee Data</th>
+        </tr>
+        <tr>
+          <th>ID</th>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email ID</th>
+          <th>Action</th>
+        </tr>
+        <tr *ngFor="let data of empData">
+          <td>{{data.id}}</td>
+          <td>{{data.firstName}}</td>
+          <td>{{data.lastName}}</td>
+          <td>{{data.emailId}}</td>
+          <td class="p-1">
+            <table>
+              <tr>
+                <td class="innerCol"><button class="btn btn-primary" [routerLink]="['/updateemployee/',data.id]">Update</button></td>
+                <td class="innerCol"><button class="btn btn-danger" (click) ="deleteData(data.id)">Delete</button></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
